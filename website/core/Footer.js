@@ -31,7 +31,6 @@ class Footer extends React.Component {
                 src={this.props.config.baseUrl + this.props.config.footerIcon}
                 alt={this.props.config.title}
                 width="66"
-                height="58"
               />
             )}
           </a>
@@ -53,14 +52,14 @@ class Footer extends React.Component {
               User Showcase
             </a>
             <a
-              href="https://stackoverflow.com/questions/tagged/"
+              href="https://stackoverflow.com/questions/tagged/cirquity"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <a href="https://chat.cirquity.com/">Project Chat</a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/cirquity"
               target="_blank"
               rel="noreferrer noopener">
               Twitter
@@ -69,12 +68,12 @@ class Footer extends React.Component {
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
+            <a href="https://github.com/cirquity">GitHub</a>
             <a
               className="github-button"
-              href={this.props.config.repoUrl}
+              href={this.props.config.mainRepoUrl}
               data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
+              data-count-href="/cirquity/cirquity/stargazers"
               data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
