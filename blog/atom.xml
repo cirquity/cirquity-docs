@@ -6,8 +6,8 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.cirquity.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Cirquity Docs news and events.</subtitle>
-    <logo>https://docs.cirquity.com/img/favicon.ico</logo>
-    <rights>Copyright © 2020 Your Name or Your Company Name</rights>
+    <logo>https://docs.cirquity.com/img/logo.png</logo>
+    <rights>Copyright © 2020 Cirquity</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
         <id>https://docs.cirquity.com/blog/2017/10/24/new-version-1.0.0.html</id>
