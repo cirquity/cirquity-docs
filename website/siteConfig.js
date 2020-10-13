@@ -9,6 +9,7 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
+/*
 const users = [
   {
     caption: 'User1',
@@ -19,6 +20,8 @@ const users = [
     pinned: true,
   },
 ];
+*/
+const users = [];
 
 const siteConfig = {
   title: 'Cirquity Docs', // Title for your website.
@@ -38,24 +41,26 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'FAQ'},
+    {doc: 'about/cirquity', label: 'Documentation'},
+    {doc: 'faq', label: 'FAQ'},
     {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
-    {search: true}
+    //{blog: true, label: 'Blog'},
+    {search: true},
   ],
+
+  disableHeaderTitle: true,
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
   headerIcon: 'img/logo.png',
-  footerIcon: 'img/logo.png',
+  footerIcon: 'img/logo-footer.png',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#335eea',
+    primaryColor: '#007aff',
     secondaryColor: '#506690',
   },
 
@@ -82,7 +87,6 @@ const siteConfig = {
     'https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap',
   ],
 
-
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
@@ -97,13 +101,19 @@ const siteConfig = {
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
-  // docsSideNavCollapsible: true,
+  docsSideNavCollapsible: false,
+  // custom url
+  cname: 'https://docs.cirquity.com',
+  // `.com/docs/guides` -> `.com/guides/`
+  docsUrl: '',
+  // Shows "jump to top" button
+  scrollToTop: true,
 
   // Show documentation's last contributor's name.
-  // enableUpdateBy: true,
+  enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+  enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

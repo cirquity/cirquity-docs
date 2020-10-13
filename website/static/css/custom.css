@@ -13,10 +13,44 @@ body {
     line-height: 24px;
 }
 
+.fixedHeaderContainer {
+    padding: 16px 0;
+}
+
+.navigationSlider .slidingNav ul li a {
+    font-size: 1.14286em;
+    font-weight: 500;
+}
+
+.homeContainer {
+    background-color: $primaryColor;
+    padding: 100px 0 150px;
+}
+.projectTitle {
+    color: #ffffff;
+}
+.homeWrapper .button {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.homeWrapper .button:hover {
+    background-color: #ffffff;
+    color: $primaryColor;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
 @media only screen and (min-width: 1024px) {
+    .fixedHeaderContainer a,
+    .navigationSlider,
+    .navigationSlider .slidingNav ul li a {
+        height: 40px;
+    }
+
+    .navPusher {
+        padding-top: 72px;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
