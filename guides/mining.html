@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Mining · Cirquity Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the Cirquity network. By doing this, you will be rewarded with CIRQ. If you want to learn about cryptocurrencies, mining is a great place to start!"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Mining · Cirquity Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cirquity.com/"/><meta property="og:description" content="Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the Cirquity network. By doing this, you will be rewarded with CIRQ. If you want to learn about cryptocurrencies, mining is a great place to start!"/><meta property="og:image" content="https://docs.cirquity.com/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.cirquity.com/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400&amp;display=swap"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo.png" alt="Cirquity Docs"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/about/cirquity" target="_self">Documentation</a></li><li class=""><a href="/faq" target="_self">FAQ</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="/about/cirquity">The project</a></li><li class="navListItem"><a class="navItem" href="/about/technical">Technical</a></li><li class="navListItem"><a class="navItem" href="/about/community">Community</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/start/installation">Using Cirquity</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/guides/mining">Mining</a></li><li class="navListItem"><a class="navItem" href="/guides/wallet">Wallet</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Development</h3><ul class=""><li class="navListItem"><a class="navItem" href="/develop/resources">Resources</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Mining</h1></header><article><div><span><p>Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the Cirquity network. By doing this, you will be rewarded with CIRQ. If you want to learn about cryptocurrencies, mining is a great place to start!</p>
+<p>There are currently a few different ways in which you can start mining Cirquity:</p>
+<h2><a class="anchor" aria-hidden="true" id="desktop-mining"></a><a href="#desktop-mining" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Desktop mining</h2>
+<h3><a class="anchor" aria-hidden="true" id="xmrig"></a><a href="#xmrig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>XMRig</h3>
+<p><a href="https://github.com/xmrig/xmrig">XMRig</a> uses separate miners for CPU and GPU, you need to download a CPU and GPU miner separately and run two separate instances on your computer.</p>
+<ul>
+<li><h3><a class="anchor" aria-hidden="true" id="download-and-install-on-windows"></a><a href="#download-and-install-on-windows" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Download and install on Windows</code></h3>
+<p>XMRig has separate miners for CPU and GPU. You can download them from here:</p>
+<ul>
+<li><a href="https://github.com/xmrig/xmrig/releases">XMRig CPU Miner</a></li>
+<li><a href="https://github.com/xmrig/xmrig-nvidia/releases">XMRig GPU NVIDIA Miner</a></li>
+<li><a href="https://github.com/xmrig/xmrig-amd/releases">XMRig GPU AMD Miner</a></li>
+</ul>
+<p><strong>Note:</strong> You will need to download and run two separate instances if you want to mine with your GPU and CPU at the same time.</p></li>
+<li><h3><a class="anchor" aria-hidden="true" id="download-and-install-on-linux"></a><a href="#download-and-install-on-linux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Download and install on Linux</code></h3>
+<p>You can directly use the pre-built binaries for XMRig CPU. Download the <code>xmrig-*-xenial-amd64.tar.gz</code> file <a href="https://github.com/xmrig/xmrig/releases">here</a>.<br>
+Run the file using <code>./xmrig</code>.</p>
+<p>XMRig needs to be compiled for NVIDIA and AMD. Instructions for compiling are linked below(Ubuntu):</p>
+<ul>
+<li><a href="https://github.com/xmrig/xmrig-nvidia/wiki/Ubuntu-Build">XMRig GPU NVIDIA Miner</a></li>
+<li><a href="https://github.com/xmrig/xmrig-amd/wiki/Ubuntu-Build">XMRig GPU AMD Miner</a></li>
+<li><a href="https://github.com/xmrig/xmrig/wiki/Build">XMRig CPU Miner</a> (instructions for multiple platforms)</li>
+</ul></li>
+<li><h3><a class="anchor" aria-hidden="true" id="download-and-install-on-mac"></a><a href="#download-and-install-on-mac" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Download and install on Mac</code></h3>
+<p>Needs to be compiled. Instructions <a href="https://github.com/xmrig/xmrig/wiki/OS-X-Build">here</a>.</p></li>
+<li><h3><a class="anchor" aria-hidden="true" id="xmrig-setup-and-configuration"></a><a href="#xmrig-setup-and-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>XMRig Setup and Configuration</code></h3>
+<h4><a class="anchor" aria-hidden="true" id="cpu-xmrig-configuration"></a><a href="#cpu-xmrig-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CPU XMRig Configuration</h4>
+<ol>
+<li>Unzip the file and extract the files into a new folder (Make sure your anti-virus doesn't delete the files)</li>
+<li>Open the <code>config.json</code> file with Notepad</li>
+<li>Find and change the following lines:
+<ol>
+<li><code>&quot;algo: &quot;cn-lite&quot;</code></li>
+<li><code>&quot;url: &quot;[pool address]&quot;</code></li>
+<li><code>&quot;user: &quot;[wallet address]&quot;</code></li>
+<li>Instead of <code>[wallet address]</code>, simply paste your Cirquity wallet's address. Make sure to keep the <code>&quot;</code>!
+<ul>
+<li>If you don't have one yet, you can find out how to create a wallet <a href="/guides/wallet">here</a></li>
+</ul></li>
+<li>In place of <code>[pool address]</code>, you'll need to choose a pool to mine towards. You can learn more about them <a href="/guides/mining#pools">here</a>. Make sure to keep the <code>&quot;</code>s!</li>
+<li>Save the file and:
+<ul>
+<li>start <code>xmrig.exe</code> if you're mining with your CPU,</li>
+<li><code>xmrig-amd.exe</code>. if you're mining with an AMD GPU,</li>
+<li>or <code>xmrig-nvidia.exe</code> if you're mining with a NVIDIA GPU.</li>
+</ul></li>
+</ol></li>
+</ol>
+<p><strong>Remember:</strong> if you want to mine with both your CPU and your GPU you must have both programs open at the same time!</p>
+<p>That's it! You should be mining away now! :)</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="solo-mining"></a><a href="#solo-mining" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solo mining</h3>
+<p>Solo-mining Cirquity means that you, alone, try to find the next block.<br>
+<strong>It is extremely hard, and not recommended</strong> - try our <a href="/guides/mining">other guides</a> if you want a more steady flow of CIRQ.<br>
+Solo-mining is limited to <em>only your CPU</em>.</p>
+<p>If you're sure you want to solo mine, let's continue.</p>
+<ul>
+<li><h3><a class="anchor" aria-hidden="true" id="setup-and-running"></a><a href="#setup-and-running" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Setup and running</code></h3>
+<p>Make sure you have  <code>cirquityd</code> and <code>miner</code>, both can be found in <a href="https://latest.cirquity.com">the latest release</a>.</p>
+<p><em>Note</em>: If they aren't there, you'll have to compile it yourself:</p>
+<ul>
+<li><a href="https://github.com/cirquity/cirquity#linux">Linux</a></li>
+<li><a href="https://github.com/cirquity/cirquity#osxapple-using-clang">OSX</a></li>
+<li><a href="https://github.com/cirquity/cirquity#windows">Windows</a></li>
+</ul>
+<p>Ensure <strong><code>cirquityd</code></strong> is running and fully synced.</p>
+<h4><a class="anchor" aria-hidden="true" id="windows"></a><a href="#windows" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Windows</h4>
+<p>Go to your folder that has <code>miner.exe</code> in it and start a cmd prompt.</p>
+<ul>
+<li>This can easily be done by moving to the <code>cirquityd.exe</code> directory in Windows Explorer, then typing <code>cmd</code> in the search bar and hitting enter.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="linux--osx"></a><a href="#linux--osx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Linux / OSX</h4>
+<p>You may be able to right click on your directory and &quot;Open in&quot; Terminal</p>
+<ul>
+<li><p>When it opens, type:<br>
+<code>miner --address cirq... --threads 4 --scan-time 1 --log-level 3</code></p></li>
+<li><p>Replace <code>cirq...</code> with your Cirquity public address.<br>
+We recommend setting the <code>--threads</code> option to half of how many you have. So if you have 12 threads in your CPU, set it to <code>6</code>.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-bash">miner --address cirqgEvJZj3bkP7Pwu8hrvhxPojoeVpJSg5sV9CU58oNLJWqJ3usg3kNNxb9ucX8Y5Spjwm1PBLRZ4QGEcn93LAdaWcTU9mQZaG --threads 4 --scan-time 1 --<span class="hljs-built_in">log</span>-level 3
+</code></pre></li>
+</ul>
+<p>Congratulations, you are now solo mining Cirquity from your CPU.</p></li>
+<li><h3><a class="anchor" aria-hidden="true" id="important-notes"></a><a href="#important-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Important notes</code></h3>
+<ul>
+<li><code>cirquityd</code> <em>must</em> stay running for the miner to mine Cirquity.</li>
+<li>Be patient. Finding a block may happen within the first few hours of mining. It also may take a week. Or it may never happen.</li>
+<li>If you accidentally close out <code>cirquityd</code> you can restart the miner by hitting Ctrl+C on your keyboard, then re-entering the miner command given above.</li>
+<li>You may have to adjust the amount of threads based on your PC's capabilities(half of how many your CPU has is recommended).</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="pools"></a><a href="#pools" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pools</h2>
+<p>Unless you want to <a href="/guides/mining#solo-mining">solo mine</a>, which is unfeasible for many people, you will need a pool to mine towards. Make sure to choose the one closest to you!</p>
+<p>To view a list of pools, check out <a href="https://explorer.cirquity.com/pools.html">the explorer</a></p>
+<ul>
+<li><h3><a class="anchor" aria-hidden="true" id="definition-of-fees"></a><a href="#definition-of-fees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Definition of fees</h3>
+<p>Rather simple; the pool operator will take a percentage of the reward of the block found for himself.</p>
+<p>Example:</p>
+<ul>
+<li>the fee is 0.1%</li>
+<li>the block reward is 30000 CIRQ</li>
+<li>30000 x 0.1% = 30</li>
+</ul>
+<p>Therefore, the pool operator will take 30 CIRQ for himself.</p></li>
+</ul>
+<ul>
+<li><h3><a class="anchor" aria-hidden="true" id="definition-of-different-types-of-methods"></a><a href="#definition-of-different-types-of-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Definition of different types of methods</h3>
+<p>These will be found on the pool website; if not specified, it is most likely proportional.</p>
+<ul>
+<li><h3><a class="anchor" aria-hidden="true" id="proportional-share-based"></a><a href="#proportional-share-based" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Proportional (share-based)</code></h3>
+<p>A proportional pool carries no risk to the pool operator as miners are simply paid out when a block is found. No blocks, no payout!</p>
+<p>With a proportional pool the risk is all on the miners if it takes longer than expected to find a block then the miners earn less. On the flip side, if the pool is lucky (they will all average out the same eventually) the miners get more.</p>
+<p>Example:</p>
+<ul>
+<li>A block is found after 100,000 shares</li>
+<li>You submitted 1,000 of those shares (you have 1% of the pool's total hash power)</li>
+<li>There’s 30000 CIRQ per block</li>
+</ul>
+<p>Quite simply you will get 1% of the block = 300 CIRQ.</p>
+<p>Now if the pool has a bad round (a round is the time taken to find a block) and it takes 200,000 shares to find a block (twice as long) and you have submitted 2,000 shares (as you’ve been mining twice as long), you still only get 1% of the block = 300 CIRQ</p>
+<p>This can also work in the miners favor too, as if it takes half the time (50,000 shares) to find a block and you submitted only 500 shares - again 1% - 300 CIRQ.</p>
+<p>Basically, you always get a percentage of the block and you win/lose depending on the “luck” of the pool.</p>
+<p>The drawbacks to a proportional pool are that there is often a fee, although some pool operators rely on donations only, and you will have to bear the variance of the block times and luck unlike a PPLNS pool.</p>
+<p>Also they are susceptible to “pool hoppers” where PPLNS pools are not.</p></li>
+<li><h3><a class="anchor" aria-hidden="true" id="pplns-pay-per-last-n-shares"></a><a href="#pplns-pay-per-last-n-shares" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>PPLNS (Pay Per Last *n* Shares)</code></h3>
+<p>PPLNS does not pay out per block found, rather it pays based on the number of shares you last submitted, and helps to dissuade pool hoppers.</p>
+<p>How it works:</p>
+<ul>
+<li>You start mining with a PPLNS pool.</li>
+<li>Rather than paying you out based on the number of shares you submitted since you started mining/the last block was found, it will pay depending on how many shares you submitted in a period of time, called the window, which is an estimate of the time in which the pool in question finds a block.</li>
+<li>So, after you start mining, it will take a few hours for you to earn your normal earnings - and since the effect of pool hoppers is lessened, you may make comparatively more than other methods.</li>
+</ul>
+<p>Basically, you get paid based on</p>
+<ul>
+<li>the number of shares you submitted (how good what you're mining with is)</li>
+<li>and how long you have been mining.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="have-questions-or-need-help"></a><a href="#have-questions-or-need-help" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Have questions or need help?</h2>
+<p>Check out our <a href="http://chat.cirquity.com">Discord</a> to get in touch.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/13/2020 by Deeterd</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/start/installation"><span class="arrow-prev">← </span><span>Using Cirquity</span></a><a class="docs-next button" href="/guides/wallet"><span>Wallet</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#desktop-mining">Desktop mining</a><ul class="toc-headings"><li><a href="#xmrig">XMRig</a></li><li><a href="#download-and-install-on-windows"><code>Download and install on Windows</code></a></li><li><a href="#download-and-install-on-linux"><code>Download and install on Linux</code></a></li><li><a href="#download-and-install-on-mac"><code>Download and install on Mac</code></a></li><li><a href="#xmrig-setup-and-configuration"><code>XMRig Setup and Configuration</code></a></li><li><a href="#solo-mining">Solo mining</a></li><li><a href="#setup-and-running"><code>Setup and running</code></a></li><li><a href="#important-notes"><code>Important notes</code></a></li></ul></li><li><a href="#pools">Pools</a><ul class="toc-headings"><li><a href="#definition-of-fees">Definition of fees</a></li><li><a href="#definition-of-different-types-of-methods">Definition of different types of methods</a></li><li><a href="#proportional-share-based"><code>Proportional (share-based)</code></a></li><li><a href="#pplns-pay-per-last-n-shares"><code>PPLNS (Pay Per Last *n* Shares)</code></a></li></ul></li><li><a href="#have-questions-or-need-help">Have questions or need help?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo-footer.png" alt="Cirquity Docs" width="66"/></a><div><h5>Docs</h5><a href="/start/installation">Getting started</a><a href="/guides/mining">User guides</a><a href="/about/cirquity">About the project</a><a href="/develop/resources">Development</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/cirquity" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://chat.cirquity.com/" target="_blank" rel="noreferrer noopener">Project Chat</a><a href="https://twitter.com/cirquity" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="https://explorer.cirquity.com/">Block Explorer</a><a href="https://explorer.cirquity.com/pools.html">Mining Pool</a><a class="github-button" href="https://github.com/cirquity/cirquity" data-icon="octicon-star" data-count-href="/cirquity/cirquity/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><div class="social"><a href="https://twitter.com/cirquity" class="twitter-follow-button">Follow @cirquity</a></div></div></section><section class="copyright">Copyright © 2020 Cirquity</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
