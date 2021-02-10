@@ -1,1 +1,1 @@
-# cirquity-docs
+# Cirquity Docs

@@ -11,9 +11,6 @@
     "Guides": [
       "guides/mining",
       "guides/wallet"
-    ],
-    "Development": [
-      "develop/resources"
     ]
   }
 }
