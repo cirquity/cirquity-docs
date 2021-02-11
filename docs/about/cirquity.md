@@ -10,7 +10,7 @@ Cirquity is a private, fast, secure and easy way to send money to friends and bu
 
 ## What is Cirquity
 
-Our coin is based on Cryptonote technology and using CN Turtle algorithm. Our goal for Cirquity is to be used on any aspect of transactions globally.
+Our coin is based on Cryptonote technology and using Argon2 Chukwa algorithm. Our goal for Cirquity is to be used on any aspect of transactions globally.
 
 ## Why Cirquity is created
 
